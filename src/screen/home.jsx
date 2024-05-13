@@ -7,7 +7,7 @@ function Home() {
   const [city, setCity] = useState(null);
   const [search, SetSearch] = useState("");
 
-  const apiKey = `https://api.openweathermap.org/data/2.5/weather?q=${search},punjab,+91&units=metric&appid=d826c957beaed2c2d62874a6a9d94746`;
+  const apiKey = `https://api.openweathermap.org/data/2.5/weather?q=${search.trim()},punjab,+91&units=metric&appid=d826c957beaed2c2d62874a6a9d94746`;
 
   async function getWeatherRequest() {
     if (!search.length) {
